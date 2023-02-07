@@ -105,9 +105,9 @@ const searchRegion = (id) => {
     loader.classList.toggle("hidden");
     regions.forEach((region) => {
       if (region.id == id) {
-          optionsList.classList.toggle("-translate-y-96");
-          optionsList.classList.toggle("hidden");
-          getTimes(region.name);
+        optionsList.classList.toggle("-translate-y-96");
+        optionsList.classList.toggle("hidden");
+        getTimes(region.name);
       }
     });
   }
@@ -156,4 +156,10 @@ const innerHTML = (obj) => {
   xuftonTime.innerHTML = obj.times.hufton;
 };
 
-// getTimes(1);
+const oneTime = () => {
+  searchRegion(1);
+  optionsList.classList.add("-translate-y-96");
+  optionsList.classList.add("hidden");
+};
+
+oneTime();
